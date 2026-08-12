@@ -1,0 +1,269 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+/* HERO */
+
+.hero {
+    padding: 100px 20px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    ), url("barberia.jfif");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 20px;
+}
+
+/* WHATSAPP */
+
+.boton-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.boton-whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+/* SERVICIOS */
+
+.servicios {
+    padding: 60px 20px;
+}
+
+.servicios h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h3 {
+    font-size: 24px;
+    color: #222;
+}
+
+.tarjeta p {
+    font-size: 16px;
+}
+
+/* BENEFICIOS */
+
+.beneficios {
+    padding: 60px 20px;
+    background-color: #222;
+    color: white;
+}
+
+.beneficios h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.beneficios-lista {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.beneficio {
+    max-width: 280px;
+}
+
+.beneficio h3 {
+    font-size: 20px;
+}
+
+.beneficio p {
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* CONTACTO */
+
+.contacto {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+}
+
+.contacto h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.contacto h3 {
+    font-size: 24px;
+    color: #222;
+    margin-top: 30px;
+}
+
+.contacto p {
+    color: #666;
+    font-size: 18px;
+}
+
+/* CELULAR */
+.boton-mapa {
+    display: inline-block;
+    margin-top: 10px;
+    color: #222;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.boton-mapa:hover {
+    text-decoration: underline;
+}
+.galeria {
+    padding: 60px 20px;
+    background-color: white;
+}
+
+.galeria h2 {
+    font-size: 36px;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+.galeria-fotos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.galeria-fotos img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .servicios {
+        padding: 40px 10px;
+    }
+
+    .servicios h2 {
+        font-size: 30px;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    .boton-whatsapp {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .beneficios {
+        padding: 50px 20px;
+    }
+
+    .beneficios h2 {
+        font-size: 30px;
+    }
+
+    .beneficios-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beneficio {
+        max-width: 350px;
+    }
+
+    .contacto {
+        padding: 50px 20px;
+    }
+
+    .contacto h2 {
+        font-size: 30px;
+    }
+
+    .contacto p {
+        font-size: 16px;
+    }
+.galeria {
+    padding: 50px 15px;
+}
+
+.galeria h2 {
+    font-size: 30px;
+}
+
+.galeria-fotos {
+    flex-direction: column;
+    align-items: center;
+}
+
+.galeria-fotos img {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+}
+}

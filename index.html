@@ -1,111 +1,791 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbería El Barrio</title>
+
+    <meta
+        name="description"
+        content="Entre Homies Barber Shop. Fade, cortes clásicos, barba y barber culture en Quinta Normal, Santiago."
+    >
+
+    <title>Entre Homies | Barber Shop</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- ICONOS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 </head>
+
 
 <body>
 
-    <section class="hero">
 
-        <h1>Barbería El Barrio</h1>
+    <!-- =========================
+         MENÚ
+    ========================== -->
 
-        <p>El estilo que te representa.</p>
+    <header class="navbar">
 
-        <p>Cortes modernos, barba profesional y atención personalizada.</p>
+        <a href="#inicio" class="logo" data-scroll>
 
-      <a href="https://wa.me/56912345678?text=Hola%2C%20quiero%20reservar%20una%20hora%20en%20Barber%C3%ADa%20El%20Barrio." class="boton-whatsapp">
-    Reservar ahora
-</a>
+            <span class="logo-script">
+                Entre Homies
+            </span>
+
+            <span class="logo-since">
+                SINCE 2023
+            </span>
+
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+
+        <nav class="menu" id="menu">
+
+            <a href="#inicio" data-scroll>
+                Inicio
+            </a>
+
+            <a href="#servicios" data-scroll>
+                Servicios
+            </a>
+
+            <a href="#trabajos" data-scroll>
+                Trabajos
+            </a>
+
+            <a href="#reservas" data-scroll>
+                Reservas
+            </a>
+
+            <a href="#contacto" data-scroll>
+                Contacto
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-slides" aria-hidden="true">
+
+            <div class="hero-slide hero-slide-1 activo"></div>
+
+            <div class="hero-slide hero-slide-2"></div>
+
+            <div class="hero-slide hero-slide-3"></div>
+
+            <div class="hero-slide hero-slide-4"></div>
+
+        </div>
+
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="hero-contenido">
+
+            <p class="hero-mini">
+                BARBER CULTURE · QUINTA NORMAL
+            </p>
+
+
+            <h1>
+                Entre Homies
+            </h1>
+
+
+            <p class="hero-frase">
+                Fade · clásicos · barba · actitud
+            </p>
+
+
+            <div class="hero-acciones">
+
+                <a
+                    href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafuHMiTP3slITydc5XDgqt6RCuXyDkyQ_91Lg6yG_IMivHOLELjwG9kSS4tYw_aem_CKnk0pRq9DSfKsO4_PuV4A&utm_id=97760_v0_s00_e0_tv3"
+                    class="boton-principal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Agendar hora
+                </a>
+
+
+                <a
+                    href="#trabajos"
+                    class="boton-secundario"
+                    data-scroll
+                >
+                    Ver trabajos
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-indicador" aria-hidden="true">
+            <span></span>
+        </div>
 
     </section>
-    <section class="servicios">
 
-    <h2>Nuestros servicios</h2>
 
-    <div class="tarjetas">
 
-        <div class="tarjeta">
-            <h3>Corte de pelo</h3>
-            <p>Cortes modernos adaptados a tu estilo.</p>
-            <p>$15.000</p>
+    <!-- =========================
+         SERVICIOS
+    ========================== -->
+
+    <section class="servicios seccion-clara" id="servicios">
+
+        <div class="seccion-cabecera">
+
+            <p class="seccion-mini">
+                LO QUE HACEMOS
+            </p>
+
+            <h2>
+                Servicios
+            </h2>
+
+            <p class="seccion-intro">
+                Elige tu servicio y agenda tu próxima hora en Entre Homies.
+            </p>
+
         </div>
 
-        <div class="tarjeta">
-            <h3>Barba</h3>
-            <p>Perfilado y cuidado profesional de barba.</p>
-            <p>$10.000</p>
+
+        <div class="tarjetas">
+
+
+            <!-- FADE -->
+
+            <article class="tarjeta">
+
+                <span class="numero">
+                    01
+                </span>
+
+                <h3>
+                    Fade
+                </h3>
+
+                <p>
+                    Degradado limpio y trabajado según tu estilo.
+                </p>
+
+                <p class="duracion">
+                    1 hora
+                </p>
+
+                <p class="precio">
+                    $10.000
+                </p>
+
+                <a
+                    href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                    class="boton-servicio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Agendar
+                </a>
+
+            </article>
+
+
+            <!-- CORTE CLÁSICO -->
+
+            <article class="tarjeta">
+
+                <span class="numero">
+                    02
+                </span>
+
+                <h3>
+                    Corte clásico
+                </h3>
+
+                <p>
+                    Corte tradicional con terminaciones limpias y precisas.
+                </p>
+
+                <p class="duracion">
+                    1 hora
+                </p>
+
+                <p class="precio">
+                    $10.000
+                </p>
+
+                <a
+                    href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                    class="boton-servicio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Agendar
+                </a>
+
+            </article>
+
+
+            <!-- PERFILADO BARBA -->
+
+            <article class="tarjeta">
+
+                <span class="numero">
+                    03
+                </span>
+
+                <h3>
+                    Perfilado de barba
+                </h3>
+
+                <p>
+                    Definición, simetría y terminaciones para mantener tu barba prolija.
+                </p>
+
+                <p class="duracion">
+                    30 minutos
+                </p>
+
+                <p class="precio">
+                    $5.000
+                </p>
+
+                <a
+                    href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                    class="boton-servicio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Agendar
+                </a>
+
+            </article>
+
+
+            <!-- PERMANENTE -->
+
+            <article class="tarjeta">
+
+                <span class="numero">
+                    04
+                </span>
+
+                <h3>
+                    Permanente
+                </h3>
+
+                <p>
+                    Trabajo de textura y forma para transformar tu cabello.
+                </p>
+
+                <p class="duracion">
+                    3 horas
+                </p>
+
+                <p class="precio">
+                    $40.000
+                </p>
+
+                <a
+                    href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                    class="boton-servicio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Agendar
+                </a>
+
+            </article>
+
+
+            <!-- VISOS -->
+
+            <article class="tarjeta">
+
+                <span class="numero">
+                    05
+                </span>
+
+                <h3>
+                    Visos
+                </h3>
+
+                <p>
+                    Aplicación de color para generar contraste y destacar tu estilo.
+                </p>
+
+                <p class="duracion">
+                    4 horas
+                </p>
+
+                <p class="precio">
+                    $35.000
+                </p>
+
+                <a
+                    href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                    class="boton-servicio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Agendar
+                </a>
+
+            </article>
+
+
+            <!-- BLOQUE -->
+
+            <article class="tarjeta">
+
+                <span class="numero">
+                    06
+                </span>
+
+                <h3>
+                    Bloque
+                </h3>
+
+                <p>
+                    Trabajo de color por bloques para conseguir un look más marcado.
+                </p>
+
+                <p class="duracion">
+                    4 horas
+                </p>
+
+                <p class="precio">
+                    $35.000
+                </p>
+
+                <a
+                    href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                    class="boton-servicio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Agendar
+                </a>
+
+            </article>
+
+
         </div>
 
-        <div class="tarjeta">
-            <h3>Corte + barba</h3>
-            <p>El servicio completo para renovar tu estilo.</p>
-            <p>$22.000</p>
+    </section>
+
+
+
+    <!-- =========================
+         GALERÍA
+    ========================== -->
+
+    <section class="galeria seccion-oscura" id="trabajos">
+
+        <div class="seccion-cabecera">
+
+            <p class="seccion-mini">
+                NUESTRO TRABAJO
+            </p>
+
+            <h2>
+                El estilo habla
+            </h2>
+
+            <p class="seccion-intro">
+                Cortes reales, detalles limpios y una estética inspirada en barber culture y gráfica chicana.
+            </p>
+
         </div>
 
-    </div>
-<section class="galeria">
 
-    <h2>Nuestros trabajos</h2>
+     <div class="galeria-fotos">
 
-    <div class="galeria-fotos">
-
-        <img src="imagenes/corte1.jfif" alt="Corte de cabello moderno">
-
-        <img src="imagenes/corte2.jfif" alt="Corte masculino">
-
-        <img src="imagenes/corte3.jfif" alt="Corte y barba">
-
-    </div>
-
-</section>
-</section>
-<section class="beneficios">
-
-    <h2>¿Por qué elegirnos?</h2>
-
-    <div class="beneficios-lista">
-
-        <div class="beneficio">
-            <h3>✂️ Profesionales</h3>
-            <p>Barberos con experiencia y pasión por su trabajo.</p>
+    <!-- FOTO 1 -->
+    <figure class="foto-card">
+        <div class="marco-foto">
+            <img src="imagenes/corte1.png" alt="Perfilado">
         </div>
 
-        <div class="beneficio">
-            <h3>⭐ Atención personalizada</h3>
-            <p>Nos preocupamos por entender el estilo que buscas.</p>
+        <figcaption class="nombre-trabajo">
+            <span>✦</span>
+            <strong>PERFILADO</strong>
+            <span>✦</span>
+        </figcaption>
+    </figure>
+
+
+    <!-- FOTO 2 -->
+    <figure class="foto-card">
+        <div class="marco-foto">
+            <img src="imagenes/corte2.png" alt="Color y textura">
         </div>
 
-        <div class="beneficio">
-            <h3>💈 Productos de calidad</h3>
-            <p>Utilizamos productos pensados para cuidar tu cabello y barba.</p>
+        <figcaption class="nombre-trabajo">
+            <span>✦</span>
+            <strong>COLOR &amp; TEXTURA</strong>
+            <span>✦</span>
+        </figcaption>
+    </figure>
+
+
+    <!-- FOTO 3 -->
+    <figure class="foto-card">
+        <div class="marco-foto">
+            <img src="imagenes/corte 3.png" alt="Fade">
         </div>
 
-    </div>
+        <figcaption class="nombre-trabajo">
+            <span>✦</span>
+            <strong>FADE</strong>
+            <span>✦</span>
+        </figcaption>
+    </figure>
 
-</section>
-<section class="contacto">
+</div>
 
-    <h2>Visítanos</h2>
+    </section>
 
-    <p>📍 Avenida Principal 123, Santiago</p>
 
-<a 
-    href="https://www.google.com/maps/search/?api=1&query=Avenida+Principal+123+Santiago"
-    target="_blank"
-    class="boton-mapa">
-    📍 Ver ubicación
-</a>
-    <h3>Horarios</h3>
 
-    <p>Lunes a viernes: 10:00 - 20:00</p>
-    <p>Sábado: 10:00 - 18:00</p>
-    <p>Domingo: Cerrado</p>
+    <!-- =========================
+         EXPERIENCIA
+    ========================== -->
 
-</section>
+    <section class="beneficios seccion-clara">
+
+        <div class="ornamento">
+            ✦
+        </div>
+
+
+        <div class="seccion-cabecera">
+
+            <p class="seccion-mini">
+                LA EXPERIENCIA
+            </p>
+
+            <h2>
+                Más que un corte
+            </h2>
+
+        </div>
+
+
+        <div class="beneficios-lista">
+
+
+            <article class="beneficio">
+
+                <i class="fa-solid fa-scissors"></i>
+
+                <h3>
+                    Técnica
+                </h3>
+
+                <p>
+                    Cuidado en cada línea, degradado y terminación.
+                </p>
+
+            </article>
+
+
+            <article class="beneficio">
+
+                <i class="fa-solid fa-user"></i>
+
+                <h3>
+                    Identidad
+                </h3>
+
+                <p>
+                    El corte se adapta a tu rostro, estilo y personalidad.
+                </p>
+
+            </article>
+
+
+            <article class="beneficio">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>
+                    Detalle
+                </h3>
+
+                <p>
+                    Un servicio pensado para que el resultado se note.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESERVAS
+    ========================== -->
+
+    <section class="reservas" id="reservas">
+
+        <div class="reservas-panel">
+
+            <p class="seccion-mini">
+                AGENDA DISPONIBLE
+            </p>
+
+            <h2>
+                Tu próximo corte empieza acá
+            </h2>
+
+            <p>
+                Reserva directamente en la agenda oficial de Entre Homies.
+            </p>
+
+
+            <a
+                href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafuHMiTP3slITydc5XDgqt6RCuXyDkyQ_91Lg6yG_IMivHOLELjwG9kSS4tYw_aem_CKnk0pRq9DSfKsO4_PuV4A&utm_id=97760_v0_s00_e0_tv3"
+                class="boton-principal"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Agendar en Setmore
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <section class="contacto seccion-clara" id="contacto">
+
+        <div class="seccion-cabecera">
+
+            <p class="seccion-mini">
+                ENCUÉNTRANOS
+            </p>
+
+            <h2>
+                Visítanos
+            </h2>
+
+            <p class="direccion">
+                Juana Quinel 1536, Quinta Normal, Región Metropolitana
+            </p>
+
+        </div>
+
+
+        <div class="contacto-grid">
+
+
+            <div class="datos-contacto">
+
+
+                <div class="dato">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Horarios
+                        </h3>
+
+                        <p>
+                            Lunes a viernes: 12:00 - 19:00
+                        </p>
+
+                        <p>
+                            Sábado: Cerrado
+                        </p>
+
+                        <p>
+                            Domingo: Cerrado
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Reservas
+                        </h3>
+
+                        <p>
+                            Agenda tu hora online y llega con tu cupo confirmado.
+                        </p>
+
+                        <a
+                            href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="enlace-texto"
+                        >
+                            Abrir agenda →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- MAPA -->
+
+            <div class="mapa">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.66713634044!2d-70.7111764!3d-33.4319215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c40b7ced4e6f%3A0x28688b574d576b9c!2sJuana%20Quinel%201536%2C%208500032%20Quinta%20Normal%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1786507031849!5m2!1ses-419!2scl"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    title="Ubicación Entre Homies"
+                >
+                </iframe>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         REDES
+    ========================== -->
+
+    <section class="redes">
+
+        <p class="seccion-mini">
+            CONECTEMOS
+        </p>
+
+        <h2>
+            Síguenos
+        </h2>
+
+
+        <div class="redes-iconos">
+
+
+            <a
+                href="https://www.instagram.com/entrehomies2023/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+            >
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+
+            <a
+                href="#"
+                aria-label="TikTok"
+            >
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+
+            <a
+                href="https://entrehomies.setmore.com/mario?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Reservar"
+            >
+                <i class="fa-regular fa-calendar"></i>
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-marca">
+
+            <span class="logo-script">
+                Entre Homies
+            </span>
+
+            <span class="logo-since">
+                SINCE 2023
+            </span>
+
+        </div>
+
+
+        <p>
+            Barber Shop · Quinta Normal · Santiago
+        </p>
+
+        <p class="copyright">
+            © 2026 Entre Homies
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

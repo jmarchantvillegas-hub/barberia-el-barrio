@@ -1,269 +1,1901 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=UnifrakturCook:wght@700&display=swap');
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --negro: #0b0b0b;
+    --negro-suave: #151515;
+
+    --crema: #f1ece3;
+    --marfil: #faf7f1;
+
+    --gris: #9b968f;
+
+    --naranja: #c85a20;
+    --naranja-oscuro: #8e3513;
+
+    --borde-claro: rgba(12, 12, 12, 0.12);
+    --borde-oscuro: rgba(255, 255, 255, 0.12);
+
+    --menu-h: 76px;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    scroll-padding-top: calc(
+        var(--menu-h) + 20px
+    );
+}
+
 body {
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
     margin: 0;
+
+    background-color: var(--crema);
+
+    color: var(--negro);
+
+    font-family: "Oswald", Arial, sans-serif;
 }
 
-/* HERO */
+img {
+    display: block;
 
-.hero {
-    padding: 100px 20px;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0.55)
-    ), url("barberia.jfif");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    border-radius: 15px;
+    width: 100%;
 }
 
-.hero h1 {
-    color: white;
-    font-size: 52px;
-    margin-bottom: 20px;
+section {
+    position: relative;
+
+    scroll-margin-top: calc(
+        var(--menu-h) + 20px
+    );
 }
 
-.hero p {
-    color: #ddd;
-    font-size: 20px;
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
 }
 
-/* WHATSAPP */
+h2 {
+    margin-bottom: 18px;
 
-.boton-whatsapp {
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    padding: 16px 32px;
+    font-size: clamp(
+        42px,
+        5.5vw,
+        72px
+    );
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================
+   TEXTOS DE SECCIÓN
+========================= */
+
+.seccion-mini {
+    margin-bottom: 12px;
+
+    color: var(--naranja);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+.seccion-intro {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    color: #68615b;
+
     font-size: 18px;
-    font-weight: bold;
-    border-radius: 12px;
-    margin-top: 20px;
+
+    line-height: 1.6;
+
+    font-family: Arial, sans-serif;
 }
 
-.boton-whatsapp:hover {
-    background-color: #1ebe5d;
+.seccion-cabecera {
+    width: min(
+        920px,
+        100%
+    );
+
+    margin: 0 auto 52px;
+
+    text-align: center;
 }
 
-/* SERVICIOS */
 
-.servicios {
-    padding: 60px 20px;
+/* =========================
+   FONDOS GENERALES
+========================= */
+
+.seccion-clara {
+    background-color: var(--crema);
 }
 
-.servicios h2 {
-    font-size: 36px;
-    color: #222;
-    margin-bottom: 40px;
-}
+.seccion-oscura {
+    background-color: var(--negro);
 
-.tarjetas {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.tarjeta {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    width: 250px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.tarjeta h3 {
-    font-size: 24px;
-    color: #222;
-}
-
-.tarjeta p {
-    font-size: 16px;
-}
-
-/* BENEFICIOS */
-
-.beneficios {
-    padding: 60px 20px;
-    background-color: #222;
     color: white;
 }
 
-.beneficios h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    height: var(--menu-h);
+
+    padding: 0 5vw;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: rgba(
+        8,
+        8,
+        8,
+        0.88
+    );
+
+    border-bottom:
+        1px solid
+        var(--borde-oscuro);
+
+    backdrop-filter:
+        blur(14px);
 }
 
-.beneficios-lista {
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
     display: flex;
-    justify-content: center;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    color: white;
+
+    text-decoration: none;
+
+    line-height: 0.9;
+}
+
+.logo-script,
+.footer .logo-script {
+
+    font-family:
+        "UnifrakturCook",
+        Georgia,
+        serif;
+
+    font-size: 29px;
+
+    letter-spacing: 0.5px;
+}
+
+.logo-since {
+
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu {
+    display: flex;
+
     gap: 30px;
 }
 
+.menu a {
+
+    color: #ddd;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+
+    transition: color 0.2s ease;
+}
+
+.menu a:hover {
+    color: var(--naranja);
+}
+
+.menu-toggle {
+    display: none;
+
+    padding: 4px 8px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100svh;
+
+    display: grid;
+
+    place-items: center;
+
+    overflow: hidden;
+
+    background-color: black;
+
+    color: white;
+}
+
+.hero-slides,
+.hero-slide,
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+}
+
+.hero-slide {
+
+    opacity: 0;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transform: scale(1.035);
+
+    transition:
+
+        opacity 1.25s ease-in-out,
+
+        transform 7s linear;
+}
+
+.hero-slide.activo {
+
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================
+   IMÁGENES HERO
+========================= */
+
+.hero-slide-1 {
+    background-image:
+        url("hero/hero1.png");
+}
+
+.hero-slide-2 {
+    background-image:
+        url("hero/hero2.png");
+}
+
+.hero-slide-3 {
+    background-image:
+        url("hero/hero3.png");
+}
+
+.hero-slide-4 {
+    background-image:
+        url("hero/hero4.png");
+}
+
+
+/* =========================
+   OSCURECER HERO
+========================= */
+
+.hero-overlay {
+
+    z-index: 2;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.83)
+        ),
+
+        radial-gradient(
+            circle at 50% 45%,
+            transparent 0 26%,
+            rgba(0, 0, 0, 0.38) 70%
+        );
+}
+
+
+/* =========================
+   CONTENIDO HERO
+========================= */
+
+.hero-contenido {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: min(
+        980px,
+        90%
+    );
+
+    padding:
+        130px 20px 90px;
+
+    text-align: center;
+}
+
+.hero-mini {
+
+    margin-bottom: 18px;
+
+    color: #e4e0da;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+
+    margin-bottom: 18px;
+
+    font-family:
+        "UnifrakturCook",
+        Georgia,
+        serif;
+
+    font-size: clamp(
+        70px,
+        12vw,
+        160px
+    );
+
+    font-weight: 700;
+
+    line-height: 0.82;
+
+    text-shadow:
+        0 7px 25px
+        rgba(0, 0, 0, 0.55);
+}
+
+.hero-frase {
+
+    margin-bottom: 28px;
+
+    color: #e8e4df;
+
+    font-size: clamp(
+        18px,
+        2vw,
+        24px
+    );
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   BOTONES HERO
+========================= */
+
+.hero-acciones {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.boton-principal,
+.boton-secundario {
+
+    display: inline-block;
+
+    min-width: 180px;
+
+    padding:
+        15px 26px;
+
+    border-radius: 3px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: 0.2s ease;
+}
+
+.boton-principal {
+
+    background-color:
+        var(--naranja);
+
+    color: white;
+
+    border:
+        1px solid
+        var(--naranja);
+}
+
+.boton-principal:hover {
+
+    background-color: #e46a29;
+
+    border-color: #e46a29;
+
+    transform:
+        translateY(-2px);
+}
+
+.boton-secundario {
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.6);
+
+    color: white;
+
+    background-color:
+        rgba(0, 0, 0, 0.25);
+}
+
+.boton-secundario:hover {
+
+    background-color: white;
+
+    color: #111;
+}
+
+
+/* =========================
+   INDICADOR HERO
+========================= */
+
+.hero-indicador {
+
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 22px;
+
+    left: 50%;
+
+    width: 1px;
+
+    height: 45px;
+
+    background-color:
+        rgba(255, 255, 255, 0.25);
+}
+
+.hero-indicador span {
+
+    display: block;
+
+    width: 1px;
+
+    height: 18px;
+
+    background-color: white;
+
+    animation:
+        bajar 1.6s infinite;
+}
+
+@keyframes bajar {
+
+    0% {
+
+        transform:
+            translateY(0);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(27px);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   SERVICIOS
+   FONDO BLANCO CHICANO
+========================= */
+
+.servicios {
+
+    padding:
+        120px 6vw;
+
+    background-image:
+
+        linear-gradient(
+            rgba(241, 236, 227, 0.78),
+            rgba(241, 236, 227, 0.78)
+        ),
+
+        url("fondoblanco.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   TARJETAS SERVICIOS
+========================= */
+
+.tarjetas {
+
+    width: min(
+        1120px,
+        100%
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.tarjeta {
+
+    position: relative;
+
+    min-height: 360px;
+
+    padding: 34px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background-color:
+        rgba(
+            250,
+            247,
+            241,
+            0.90
+        );
+
+    border:
+        1px solid
+        var(--borde-claro);
+
+    text-align: left;
+
+    backdrop-filter: blur(3px);
+
+    transition:
+        transform 0.2s ease,
+
+        box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(
+            0,
+            0,
+            0,
+            0.10
+        );
+}
+
+.tarjeta::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -35px;
+
+    bottom: -55px;
+
+    width: 140px;
+
+    height: 140px;
+
+    border:
+        1px solid
+        rgba(
+            200,
+            90,
+            32,
+            0.18
+        );
+
+    border-radius: 50%;
+}
+
+.tarjeta .numero {
+
+    color: var(--naranja);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.tarjeta h3 {
+
+    margin:
+        38px 0 15px;
+
+    font-size: 28px;
+
+    text-transform: uppercase;
+}
+
+.tarjeta p {
+
+    color: #68615b;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+.tarjeta .duracion {
+
+    margin-top: 18px;
+
+    margin-bottom: 0;
+
+    color: #8a817a;
+
+    font-family:
+        "Oswald",
+        sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.tarjeta .precio {
+
+    margin:
+        5px 0 18px;
+
+    color: #111;
+
+    font-family:
+        "Oswald",
+        sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   BOTÓN SERVICIO
+========================= */
+
+.boton-servicio {
+
+    margin-top: auto;
+
+    width: fit-content;
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid
+        #111;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    position: relative;
+
+    z-index: 2;
+
+    transition: 0.2s ease;
+}
+
+.boton-servicio:hover {
+
+    background-color: #111;
+
+    color: white;
+}
+
+
+/* =========================
+   GALERÍA
+   FONDO NEGRO CHICANO
+========================= */
+
+.galeria {
+
+    padding:
+        120px 6vw;
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.67),
+            rgba(0, 0, 0, 0.67)
+        ),
+
+        url("fondonegro.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    color: white;
+}
+
+.galeria .seccion-intro {
+
+    color: #c1bbb4;
+}
+
+
+/* =========================
+   EXPERIENCIA
+   FONDO BLANCO CHICANO
+========================= */
+
+.beneficios {
+
+    padding:
+        120px 6vw;
+
+    text-align: center;
+
+    background-image:
+
+        linear-gradient(
+            rgba(241, 236, 227, 0.78),
+            rgba(241, 236, 227, 0.78)
+        ),
+
+        url("fondoblanco.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.ornamento {
+
+    color: var(--naranja);
+
+    font-size: 24px;
+
+    margin-bottom: 22px;
+}
+
+.beneficios-lista {
+
+    width: min(
+        1050px,
+        100%
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 26px;
+}
+
 .beneficio {
-    max-width: 280px;
+
+    padding: 28px;
+
+    background-color:
+        rgba(
+            250,
+            247,
+            241,
+            0.78
+        );
+
+    border:
+        1px solid
+        var(--borde-claro);
+
+    backdrop-filter:
+        blur(3px);
+}
+
+.beneficio i {
+
+    margin-bottom: 20px;
+
+    color: var(--naranja);
+
+    font-size: 24px;
 }
 
 .beneficio h3 {
-    font-size: 20px;
+
+    margin-bottom: 12px;
+
+    font-size: 22px;
+
+    text-transform: uppercase;
 }
 
 .beneficio p {
-    color: #ddd;
-    font-size: 16px;
+
+    color: #67615c;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
 }
 
-/* CONTACTO */
+
+/* =========================
+   RESERVAS
+========================= */
+
+.reservas {
+
+    padding:
+        130px 6vw;
+
+    background:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.78),
+            rgba(0, 0, 0, 0.78)
+        ),
+
+        url("hero/hero4.png")
+        center / cover;
+
+    color: white;
+}
+
+.reservas-panel {
+
+    width: min(
+        760px,
+        100%
+    );
+
+    margin: 0 auto;
+
+    padding:
+        55px 45px;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.22
+        );
+
+    background-color:
+        rgba(
+            10,
+            10,
+            10,
+            0.62
+        );
+
+    backdrop-filter:
+        blur(6px);
+
+    text-align: center;
+}
+
+.reservas-panel h2 {
+
+    margin-bottom: 20px;
+}
+
+.reservas-panel > p:not(.seccion-mini) {
+
+    margin-bottom: 28px;
+
+    color: #d0cbc4;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CONTACTO
+========================= */
 
 .contacto {
-    padding: 60px 20px;
-    background-color: #f4f4f4;
+
+    padding:
+        120px 6vw;
+
+    background-color:
+        var(--crema);
 }
 
-.contacto h2 {
-    font-size: 36px;
-    color: #222;
-    margin-bottom: 30px;
+.direccion {
+
+    color: #615b56;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 17px;
 }
 
-.contacto h3 {
-    font-size: 24px;
-    color: #222;
-    margin-top: 30px;
+.contacto-grid {
+
+    width: min(
+        1180px,
+        100%
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 28px;
+
+    align-items: stretch;
 }
 
-.contacto p {
-    color: #666;
-    font-size: 18px;
+.datos-contacto {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+    text-align: left;
 }
 
-/* CELULAR */
-.boton-mapa {
-    display: inline-block;
-    margin-top: 10px;
-    color: #222;
-    font-weight: bold;
+.dato {
+
+    display: grid;
+
+    grid-template-columns:
+        42px 1fr;
+
+    gap: 18px;
+
+    padding: 28px;
+
+    background-color:
+        var(--marfil);
+
+    border:
+        1px solid
+        var(--borde-claro);
+}
+
+.dato > span {
+
+    color: var(--naranja);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.dato h3 {
+
+    margin-bottom: 12px;
+
+    font-size: 22px;
+
+    text-transform: uppercase;
+}
+
+.dato p {
+
+    margin-bottom: 7px;
+
+    color: #625d58;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+.enlace-texto {
+
+    color: var(--naranja-oscuro);
+
+    font-weight: 700;
+
     text-decoration: none;
 }
 
-.boton-mapa:hover {
-    text-decoration: underline;
-}
-.galeria {
-    padding: 60px 20px;
-    background-color: white;
+
+/* =========================
+   MAPA
+========================= */
+
+.mapa {
+
+    min-height: 470px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--borde-claro);
 }
 
-.galeria h2 {
-    font-size: 36px;
-    color: #222;
-    margin-bottom: 40px;
+.mapa iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 470px;
+
+    border: none;
+
+    filter:
+
+        grayscale(0.78)
+
+        contrast(0.96);
 }
 
-.galeria-fotos {
+
+/* =========================
+   REDES
+========================= */
+
+.redes {
+
+    padding:
+        95px 6vw;
+
+    background-color:
+        #ddd6cb;
+
+    text-align: center;
+}
+
+.redes h2 {
+
+    margin-bottom: 32px;
+}
+
+.redes-iconos {
+
     display: flex;
+
     justify-content: center;
-    gap: 20px;
+
+    gap: 12px;
 }
 
-.galeria-fotos img {
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-@media screen and (max-width: 600px) {
+.redes-iconos a {
 
-    body {
-        padding: 15px;
+    width: 58px;
+
+    height: 58px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid
+        rgba(
+            10,
+            10,
+            10,
+            0.25
+        );
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    transition:
+        0.2s ease;
+}
+
+.redes-iconos a:hover {
+
+    background-color: #111;
+
+    color: var(--crema);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+
+    padding:
+        60px 20px;
+
+    background-color:
+        #050505;
+
+    color: white;
+
+    text-align: center;
+}
+
+.footer-marca {
+
+    display: inline-flex;
+
+    flex-direction: column;
+
+    margin-bottom: 22px;
+}
+
+.footer .logo-script {
+
+    font-size: 38px;
+}
+
+.footer p {
+
+    margin:
+        7px 0;
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+}
+
+.footer .copyright {
+
+    margin-top: 20px;
+
+    color: #666;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .tarjetas,
+    .beneficios-lista {
+
+        grid-template-columns:
+            1fr;
+
+        width: min(
+            620px,
+            100%
+        );
     }
 
-    .hero {
-        padding: 60px 20px;
+    .galeria-fotos {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .foto-card:first-child {
+
+        grid-column:
+            1 / -1;
+    }
+
+    .contacto-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    :root {
+        --menu-h: 66px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+
+        height:
+            var(--menu-h);
+
+        padding:
+            0 18px;
+    }
+
+    .logo-script {
+
+        font-size: 23px;
+    }
+
+    .logo-since {
+
+        font-size: 7px;
+    }
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+    .menu {
+
+        position: absolute;
+
+        top:
+            var(--menu-h);
+
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background-color:
+            rgba(
+                8,
+                8,
+                8,
+                0.98
+            );
+
+        border-top:
+            1px solid
+            var(--borde-oscuro);
+    }
+
+    .menu.activo {
+
+        display: flex;
+    }
+
+    .menu a {
+
+        padding:
+            18px 22px;
+
+        border-bottom:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.08
+            );
+
+        text-align: left;
+    }
+
+
+    /* HERO */
+
+    .hero-contenido {
+
+        width: 100%;
+
+        padding:
+            105px 20px 70px;
     }
 
     .hero h1 {
-        font-size: 40px;
+
+        font-size: clamp(
+            64px,
+            22vw,
+            100px
+        );
     }
 
-    .hero p {
+    .hero-mini {
+
+        font-size: 10px;
+
+        letter-spacing: 2.7px;
+    }
+
+    .hero-frase {
+
         font-size: 17px;
-        line-height: 1.5;
     }
 
-    .servicios {
-        padding: 40px 10px;
-    }
+    .hero-acciones {
 
-    .servicios h2 {
-        font-size: 30px;
-    }
-
-    .tarjetas {
         flex-direction: column;
+
         align-items: center;
-        gap: 20px;
+    }
+
+    .boton-principal,
+    .boton-secundario {
+
+        width: min(
+            100%,
+            330px
+        );
+    }
+
+
+    /* SECCIONES */
+
+    .servicios,
+    .galeria,
+    .beneficios,
+    .contacto {
+
+        padding:
+            82px 18px;
+    }
+
+    .reservas {
+
+        padding:
+            90px 18px;
+    }
+
+    h2 {
+
+        font-size: 42px;
+    }
+
+    .seccion-cabecera {
+
+        margin-bottom: 38px;
+    }
+
+
+    /* DESACTIVAR FONDO FIJO EN MÓVIL */
+
+    .servicios,
+    .galeria,
+    .beneficios {
+
+        background-attachment: scroll;
+    }
+
+
+    /* TARJETAS */
+
+    .tarjetas,
+    .beneficios-lista,
+    .galeria-fotos {
+
+        grid-template-columns:
+            1fr;
     }
 
     .tarjeta {
-        width: 100%;
-        max-width: 350px;
-        box-sizing: border-box;
+
+        min-height: 0;
+
+        padding:
+            28px 24px;
     }
 
-    .boton-whatsapp {
-        display: block;
-        width: 100%;
-        box-sizing: border-box;
+
+    /* GALERÍA */
+
+    .foto-card:first-child {
+
+        grid-column: auto;
     }
 
-    .beneficios {
-        padding: 50px 20px;
+    .foto-card img {
+
+        height: 390px;
     }
 
-    .beneficios h2 {
-        font-size: 30px;
+
+    /* RESERVAS */
+
+    .reservas-panel {
+
+        padding:
+            38px 22px;
     }
 
-    .beneficios-lista {
-        flex-direction: column;
-        align-items: center;
+
+    /* CONTACTO */
+
+    .contacto-grid {
+
+        grid-template-columns:
+            1fr;
     }
 
-    .beneficio {
-        max-width: 350px;
+    .dato {
+
+        grid-template-columns:
+            34px 1fr;
+
+        padding:
+            23px 20px;
     }
 
-    .contacto {
-        padding: 50px 20px;
+
+    /* MAPA */
+
+    .mapa,
+    .mapa iframe {
+
+        min-height: 340px;
     }
 
-    .contacto h2 {
-        font-size: 30px;
+
+    /* REDES */
+
+    .redes {
+
+        padding:
+            75px 18px;
     }
 
-    .contacto p {
-        font-size: 16px;
-    }
-.galeria {
-    padding: 50px 15px;
 }
 
-.galeria h2 {
-    font-size: 30px;
+
+/* =========================
+   MENOS MOVIMIENTO
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-slide {
+        transition: none;
+    }
+
+    .hero-indicador span {
+        animation: none;
+    }
+
 }
 
-.galeria-fotos {
-    flex-direction: column;
-    align-items: center;
+
+/* =========================
+   ENCUÉNTRANOS
+   FONDO CHICANO BLANCO
+========================= */
+
+#contacto {
+    background:
+        linear-gradient(
+            rgba(241, 236, 227, 0.45),
+            rgba(241, 236, 227, 0.45)
+        ),
+        url("fondoblanco.png") center center / cover no-repeat !important;
 }
 
-.galeria-fotos img {
+/* =========================================================
+   GALERÍA FINAL DEPURADA - ENTRE HOMIES
+========================================================= */
+
+#trabajos .galeria-fotos {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    align-items: stretch;
+}
+
+#trabajos .foto-card {
+    margin: 0;
+    padding: 5px;
+
     width: 100%;
-    max-width: 350px;
-    height: 250px;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #050505;
+
+    border: 2px solid #d8cfbf;
+    outline: 1px solid rgba(200, 90, 32, 0.42);
+
+    box-shadow:
+        0 0 0 3px #050505,
+        0 0 0 5px rgba(216, 207, 191, 0.60),
+        0 16px 34px rgba(0, 0, 0, 0.58);
+
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease;
 }
+
+#trabajos .foto-card:first-child {
+    grid-column: auto;
+}
+
+#trabajos .foto-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 0 3px #050505,
+        0 0 0 5px rgba(216, 207, 191, 0.78),
+        0 22px 42px rgba(0, 0, 0, 0.66);
+}
+
+#trabajos .marco-foto {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    position: relative;
+    overflow: hidden;
+
+    background: #070707;
+    border: 1px solid rgba(239, 230, 215, 0.86);
+}
+
+#trabajos .marco-foto img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        contrast(1.03)
+        saturate(0.98);
+
+    transition:
+        transform 0.42s ease,
+        filter 0.42s ease;
+}
+
+#trabajos .foto-card:hover .marco-foto img {
+    transform: scale(1.018);
+
+    filter:
+        contrast(1.06)
+        saturate(1.02);
+}
+
+#trabajos .marco-foto::before,
+#trabajos .marco-foto::after {
+    content: "❦";
+
+    position: absolute;
+    z-index: 5;
+
+    color: #eee4d3;
+    font-size: 22px;
+    line-height: 1;
+
+    text-shadow:
+        1px 1px 2px #000,
+        -1px -1px 2px #000;
+
+    pointer-events: none;
+}
+
+#trabajos .marco-foto::before {
+    top: 10px;
+    left: 11px;
+}
+
+#trabajos .marco-foto::after {
+    right: 11px;
+    bottom: 10px;
+
+    transform: rotate(180deg);
+}
+
+#trabajos .nombre-trabajo {
+    width: 100%;
+    min-height: 64px;
+
+    margin: 0;
+    padding: 12px 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0a0a0a 0%,
+            #030303 100%
+        );
+
+    border-top: 2px solid #c85a20;
+
+    color: #eee5d7;
+    text-align: center;
+    overflow: hidden;
+}
+
+#trabajos .nombre-trabajo::after {
+    content: "";
+
+    position: absolute;
+
+    left: 16px;
+    right: 16px;
+    bottom: 4px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(200, 90, 32, 0.95),
+            transparent
+        );
+}
+
+#trabajos .nombre-trabajo strong {
+    color: #eee5d7;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    line-height: 1;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+#trabajos .nombre-trabajo span {
+    color: #d35f20;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+#trabajos .foto-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 2px;
+    z-index: 15;
+
+    border: 1px dashed rgba(239, 230, 215, 0.28);
+
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    #trabajos .galeria-fotos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    #trabajos .foto-card {
+        padding: 4px;
+    }
+
+    #trabajos .nombre-trabajo {
+        min-height: 58px;
+        gap: 6px;
+        padding: 10px 4px;
+    }
+
+    #trabajos .nombre-trabajo strong {
+        font-size: 13px;
+        letter-spacing: 1.4px;
+    }
+
+    #trabajos .nombre-trabajo span {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    #trabajos .galeria-fotos {
+        width: min(390px, 100%);
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    #trabajos .foto-card:first-child {
+        grid-column: auto;
+    }
+
+    #trabajos .nombre-trabajo {
+        min-height: 64px;
+        gap: 11px;
+    }
+
+    #trabajos .nombre-trabajo strong {
+        font-size: 18px;
+        letter-spacing: 2.5px;
+    }
+
+    #trabajos .nombre-trabajo span {
+        font-size: 13px;
+    }
 }
